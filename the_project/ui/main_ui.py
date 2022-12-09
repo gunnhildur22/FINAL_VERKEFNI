@@ -44,11 +44,10 @@ class Menu_UI:
         print(x)
         print()
         
-        print("1. view league")
-        print("2. create")
-        print("3. player stats")
-        print("4. Register game result")
-        print("5. Edit the league")
+        print("1. View league")
+        print("2. Create")
+        print("3. Register game result")
+        print("4. Edit the league")
         print()
     
     def input_prompt(self):
@@ -62,13 +61,20 @@ class Menu_UI:
             self.menu_output()
             command = input("Enter your command: ")
             command = command.lower()
+            while self.get_correct_input(command) == False:
+                self.clear_screen(platform)
+                self.menu_output()
+                print("Invalid input, try again")
+                command = input("Enter your command: ")
+                command = command.lower()
+
             
             if command == "1":
                 self.clear_screen(platform)
                 menu = View_Leagues_UI(self.logic_wrapper)
                 back_method = menu.input_view_leagues()
                 if back_method == "q":
-                    return
+                    return "q"
                 
                 
             elif command == "2":
@@ -77,23 +83,16 @@ class Menu_UI:
                 back_method = menu.input_create()
                 if back_method == "q":
                     return "q"
-            
-            elif command == "3":
-                self.clear_screen(platform)
-                menu = Playerstats_UI(self.logic_wrapper)
-                back_method = menu.get_input()
-                if back_method == "q":
-                    return "q"
                 
 
-            elif command == "4":
+            elif command == "3":
                 self.clear_screen(platform)
                 menu = Games_Results_Choose_League_UI(self.logic_wrapper)
                 back_method = menu.input_games_results_get_league()
                 if back_method == "q":
                     return "q"
     
-            elif command == "5":
+            elif command == "4":
                 self.clear_screen(platform)
                 menu = Edit_League_get_league_UI(self.logic_wrapper)
                 back_method = menu.input_get_league()
@@ -104,10 +103,6 @@ class Menu_UI:
                 print("Bye!")
                 time.sleep(0.5)
                 break
-
-            else:
-                print("invalid input, try again")
-
         return
 
     def clear_screen(self,platform):
@@ -128,3 +123,17 @@ class Menu_UI:
             os.system('clear')
         elif platform == "win32":
             os.system('cls')
+        
+    def get_correct_input(self,command):
+        if command == "1":
+            return True
+        elif command == "2":
+            return True
+        elif command == "3":
+            return True
+        elif command == "4":
+            return True
+        elif command == "q":
+            return True
+        else:
+            return False
