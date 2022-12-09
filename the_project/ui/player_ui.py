@@ -1,3 +1,6 @@
+import os
+from sys import platform
+import time
 from logic.player_logic import Player_Logic
 from model.player import Player
 
@@ -11,8 +14,7 @@ class Create_Player_UI:
         Prints out the create player menu
         '''
         print("Create a player")
-        print("q for quit")
-        print("b for back")
+
     
     def input_create(self):
         '''
@@ -24,27 +26,40 @@ class Create_Player_UI:
             self.create_menu_output()
             name = input("Enter player name: ")
             while self.get_valid_name(name) == False:
-                print("The name cannot contain numbers, please try again.")
+                self.clear_screen(platform)
+                self.create_menu_output
+                print("The name cannot contain numbers or is to short, please try again.")
                 name = input("Enter player name: ")
             
+            self.clear_screen(platform)
             social_security = input("Enter social security number: ")
             while self.get_social_security(social_security) == False:
+                self.clear_screen(platform)
+                self.create_menu_output
                 print("The Social security number has to contain 10 numbers!")
                 social_security = input("Enter social security number: ")
             
+            self.clear_screen(platform)
             phonenumber = input("Enter player phonenumber: ")
             while self.get_phonenumber(phonenumber) == False:
+                self.clear_screen(platform)
+                self.create_menu_output
                 print("Phonenumbrs must contain 7 numbers, try again")
                 phonenumber = input("Enter player phonenumber: ")
             
+            self.clear_screen(platform)
             address = input("Enter player address: ")
             while self.get_address(address) == False:
+                self.clear_screen(platform)
+                self.create_menu_output
                 print("invalid address")
                 address = input("Enter player address: ")
 
-
+            self.clear_screen(platform)
             email = input("Enter a player email: ")
             while self.get_email(email) == False:
+                self.clear_screen(platform)
+                self.create_menu_output
                 print("invalid email address")
                 email = input("Enter a player email: ")
 
@@ -103,3 +118,14 @@ class Create_Player_UI:
         elif "." not in split_mail[1]:
             return False 
         return True 
+
+    def clear_screen(self,platform):
+        if platform == "linux" or platform == "linux2":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "darwin":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "win32":
+            time.sleep(0.5)
+            os.system('cls')

@@ -1,12 +1,18 @@
 
 
 
+import os
+from sys import platform
+import time
+
+
 class View_Best_Players:
     def __init__(self,logic_connection, league) -> None:
         self.logic_wrapper = logic_connection
         self.league = league
     
     def menu_output(self):
+        self.clear_screen(platform)
         print("Best Players!")
         dict_qp = {}
         dict_inshot = {}
@@ -34,5 +40,27 @@ class View_Best_Players:
         print("{:<20}{:<20}{:<20}{:<20}".format("Name","QP","Inshot","Outshot"))
         for key,val in sorted_dict_points.items():
             print("{:<20}{:<20}{:<20}{:<20}".format(str(key),str(val[0]),str(val[1]),str(val[2])))
+        
 
+        print("q for quit")
+        command = input("press enter to return ")
+        if command == "q":
+            print("bye")
+            self.clear_screen(platform)
+            quit()
+        else:
+            self.clear_screen(platform)
+            return
+        
+    def clear_screen(self,platform):
+        if platform == "linux" or platform == "linux2":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "darwin":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "win32":
+            time.sleep(0.5)
+            os.system('cls')
+                    
 
