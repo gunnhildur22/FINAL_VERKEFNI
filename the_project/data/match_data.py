@@ -3,7 +3,7 @@ import csv
 import os
 class Match_data:
     def __init__(self) -> None:
-        self.file_name = "FINAL_VERKEFNI/the_project/files/match_results.csv"
+        self.file_name = "./the_project/files/match_results.csv"
 
     def get_all_matches(self):
         '''

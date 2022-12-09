@@ -25,6 +25,11 @@ class View_Leagues_UI:
         while True:
             command = input("Choose a league by no. : ")
             command = command.lower()
+            for league in leagues:
+                if league.id == command:
+                    chosen_league = league
+                    menu = View_League_UI(self.logic_wrapper, chosen_league)
+                    command = menu.input_view_league()
             if command == "q":
                 print("quitting")
                 self.clear_screen(platform)
@@ -32,11 +37,7 @@ class View_Leagues_UI:
             elif command == "b":
                 self.clear_screen(platform)
                 return "b"
-            for league in leagues:
-                if league.id == command:
-                    chosen_league = league
-                    menu = View_League_UI(self.logic_wrapper, chosen_league)
-                    league_menu = menu.input_view_league()
+            
             else:
                 print("invalid input, try again")
 

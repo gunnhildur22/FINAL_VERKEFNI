@@ -7,7 +7,7 @@ import datetime
 
 class League_data:
     def __init__(self):
-        self.file_name = "FINAL_VERKEFNI/the_project/files/league.csv"
+        self.file_name = "./the_project/files/league.csv"
         
     def __len__(self):
         length = 1

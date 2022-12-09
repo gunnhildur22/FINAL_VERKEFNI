@@ -3,7 +3,7 @@ import csv
 
 class Game_data:
     def __init__(self) -> None:
-        self.file_name = "FINAL_VERKEFNI/the_project/files/games.csv"
+        self.file_name = "./the_project/files/games.csv"
 
     def get_all_games(self):
         '''

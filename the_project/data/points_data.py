@@ -4,7 +4,7 @@ from model.qp import QP
 
 class Points_data:
     def __init__(self) -> None:
-        self.file_name = "FINAL_VERKEFNI/the_project/files/qp.csv"
+        self.file_name = "./the_project/files/qp.csv"
     
     def get_all_points(self) -> list:
         '''

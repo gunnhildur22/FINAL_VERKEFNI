@@ -5,7 +5,7 @@ from model.player import Player
 
 class Player_data:
     def __init__(self) -> None:
-        self.file_name = "FINAL_VERKEFNI/the_project/files/players.csv"
+        self.file_name = "./the_project/files/players.csv"
 
     def read_all_players(self):
         '''

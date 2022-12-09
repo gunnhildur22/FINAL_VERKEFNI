@@ -30,7 +30,7 @@ class View_League_UI:
         self.clear_screen(platform)
         while True:
             self.menu_output()
-            command = input("Enter your choose: ")
+            command = input("Enter your choice: ")
             command = command.lower()
             if command == "q":
                 print("quitting")
