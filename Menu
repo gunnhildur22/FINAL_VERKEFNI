@@ -1,0 +1,50 @@
+1. View Stats
+
+2. Tournaments
+    1. Create Tournament
+        -> Enter Name:
+            -> Enter Date(s):
+                -> Enter Organizer:
+                    -> Club Tournament? (Y / N):
+                        Y. # List of all Clubs
+                            1-#. Enter Participating Club(s):
+                            # Display Clubs one by one
+                            # Display list of players
+
+                        N. 
+
+    2. View Tournaments
+        1. Ongoing Tournaments
+            # List of Ongoing Tournaments
+            1-#. Tournament
+                # 1-9 List of finished matches
+                # a-z List of Upcoming matches
+                1-#. Match
+                    
+
+
+            S. Search
+
+        2. Future Tournaments
+
+        3. Previous Tournaments
+
+    S. Search
+
+
+3. Club
+    # List of all clubs
+    0. Create Club
+        -> Enter name:
+            -> Enter address:
+                -> Enter phone:
+
+    1-#. Choose club
+        # Name, address, phone
+        # List of players in team
+        1-#. Display a players info
+            # Name, Kennitala, address, phone, mobile, email
+        0. Add Player to Club
+        X. Delete Club
+    S. Search 
+    
