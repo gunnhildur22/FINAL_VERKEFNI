@@ -11,12 +11,6 @@ from ui.player_stats_ui import Playerstats_UI
 import os
 from sys import platform
 
-if platform == "linux" or platform == "linux2":
-    print("program running on linux")
-elif platform == "darwin":
-    print("program running on mac")
-elif platform == "win32":
-    print("program running on windows")
 
 class Menu_UI:
     def __init__(self) -> None:
@@ -29,10 +23,7 @@ class Menu_UI:
         '''
         self.first_clear_screen(platform)
 
-        '''for x in range (0,5):  
-            b = "Loading" + "." * x
-            print (b, end="\r")
-            time.sleep(0.5)'''
+
         
         print(" _      _      __ _     _   ___  _  _  _    ")
         print("|_)| | |_) /\ (_ |_|\/||_|\ ||  / \|_)|_|\ | ")
