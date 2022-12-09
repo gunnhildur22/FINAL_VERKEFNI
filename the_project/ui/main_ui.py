@@ -44,11 +44,10 @@ class Menu_UI:
         print(x)
         print()
         
-        print("1. view league")
-        print("2. create")
-        print("3. player stats")
-        print("4. Register game result")
-        print("5. Edit the league")
+        print("1. View league")
+        print("2. Create")
+        print("3. Register game result")
+        print("4. Edit the league")
         print()
     
     def input_prompt(self):
