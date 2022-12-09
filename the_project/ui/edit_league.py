@@ -1,9 +1,8 @@
+
 import os
 from sys import platform
 import time
-from ui.e_game_result import Edit_Game_Results
 from ui.e_game_date import Edit_Game_Date_UI
-
 
 
 class Edit_League_UI:
@@ -12,11 +11,8 @@ class Edit_League_UI:
         self.league = league
 
     def input_edit_league(self):
-        '''
-        Asks the user what he wants to edit
-        Calls a appropriate function from appropriate class
-        '''
         while True:
+            self.clear_screen(platform)
             self.print_menu()
             command = input("Enter your selection: ")
             command = command.lower()
@@ -37,11 +33,10 @@ class Edit_League_UI:
                 if back_method == "q":
                     return "q"
             elif command == "2":
-                menu = Edit_Game_Results(self.logic_wrapper, self.league)
-                back_method = menu.input_edit_game_date()
-                if back_method == "q":
-                    return "q"
+                pass
 
+            
+        
     def get_correct_input(self,command):
         if command == "1":
             return True

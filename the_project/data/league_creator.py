@@ -40,7 +40,7 @@ class League_data:
     def edit_dates_of_matches(self, league):
         with open(self.file_name, "r+",newline = "", encoding = "utf-8") as csvfile_r:
             reader = csv.DictReader(csvfile_r)
-            with open("the_project/files/leagues_temp.csv", "a", newline = "", encoding = "utf-8") as csvfile_w:
+            with open("FINAL_VERKEFNI/the_project/files/leagues_temp.csv", "a", newline = "", encoding = "utf-8") as csvfile_w:
                 fieldnames = ["id", "name", "org_name" , "phone", "email", "start_date", "teams_list", "matches_list"]
                 writer = csv.DictWriter(csvfile_w, fieldnames = fieldnames)
                 counter = 0
@@ -52,6 +52,6 @@ class League_data:
                     else:
                         writer.writerow({'id': row["id"] ,'name': row["name"], "org_name": row["org_name"], "phone": row["phone"], "email": row["email"], "start_date": row["start_date"], "teams_list": row["teams_list"], "matches_list": row["matches_list"]})
                     counter += 1
-        os.remove("the_project/files/league.csv")
-        os.rename("the_project/files/leagues_temp.csv", "the_project/files/league.csv")
+        os.remove("FINAL_VERKEFNI/the_project/files/league.csv")
+        os.rename("FINAL_VERKEFNI/the_project/files/leagues_temp.csv", "FINAL_VERKEFNI/the_project/files/league.csv")
             

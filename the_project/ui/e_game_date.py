@@ -1,8 +1,10 @@
-import datetime
 
-MatchId = 0
-MatchDate = 1
-MatchTeams = 2
+import datetime
+import os
+from sys import platform
+import time
+
+
 class Edit_Game_Date_UI:
     def __init__(self, logic_connection, league):
         self.logic_wrapper = logic_connection
@@ -10,10 +12,10 @@ class Edit_Game_Date_UI:
 
     def menu_output(self):
         
+        self.clear_screen(platform)
         print("Edit Game Date")
         print("Future Games!")
         matches = self.league.matches_list
-        games = []
         nr = 1
         played_matches = 0
         for match in matches:
@@ -54,14 +56,37 @@ class Edit_Game_Date_UI:
                     chosen_match_id = match[0]
                     print("Enter a new date for the match: ")
                     new_date = input("dd/mm/yyyy")
+                    self.clear_screen(platform)
+                    while self.get_startdate(new_date) == False:
+                        self.clear_screen(platform)
+                        print("Invalid date, Try again")
+                        new_date = input("dd/mm/yyyy\t")
+                        self.clear_screen(platform)
                     new_date = new_date.split("/")
                     new_date_ = datetime.date(int(new_date[2]), int(new_date[1]), int(new_date[0]))
                     league_id = self.league.id
                     self.logic_wrapper.edit_dates_of_matches(league_id, chosen_match_id, new_date_)
 
-
-
-
-            
             else:
                 print("Incorrect input, try again")
+
+    def clear_screen(self,platform):
+        if platform == "linux" or platform == "linux2":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "darwin":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "win32":
+            time.sleep(0.5)
+            os.system('cls')
+        
+    def get_startdate(self,startdate):
+        date_today = datetime.datetime.now()
+        try:
+            datetime_object = datetime.datetime.strptime(startdate, '%d/%m/%Y')
+        except ValueError:
+            return False
+        if datetime_object < date_today:
+            return False
+        return True 

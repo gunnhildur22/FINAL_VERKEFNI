@@ -46,7 +46,7 @@ class G_R_Get_Results_C_UI:
         #asks repeatetly for players
 
         self.clear_screen(platform) 
-        self.print_team(a_team,all_players,a_player_ids)    
+        self.print_team(h_team,all_players,h_player_ids)    
         
         HP2 = input(f"Choose a player 2 from {h_team} (with no.): ")
         while self.get_player_no(HP2,h_player_ids) == False:
@@ -82,6 +82,7 @@ class G_R_Get_Results_C_UI:
             self.clear_screen(platform)
             print("input must be x-x format")
             score = input(f"Enter result for this game (f.ex. 2-1): ")
+        self.clear_screen(platform)
         
         #gets the game id
         all_games = self.logic_wrapper.get_all_games()

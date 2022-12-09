@@ -26,7 +26,6 @@ class G_R_Get_Results_301_UI:
                 a_player_ids = team.player_ids
         
         self.clear_screen(platform)
-        self.print_team(h_team,all_players,h_player_ids)
 
         #lists all the players from the home team
         self.print_teams(h_team,all_players,h_player_ids)
