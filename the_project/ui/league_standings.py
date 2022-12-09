@@ -1,4 +1,9 @@
 
+import os
+from sys import platform
+import time
+
+
 class League_Standings:
     def __init__(self,logic_connection, league) -> None:
         self.logic_wrapper = logic_connection
@@ -89,3 +94,26 @@ class League_Standings:
         #prints out every team and their total wins, total losses, total matches played and total games won
         for key,val in sorted_dict_scores.items():
             print("{:<20}{:<20}{:<20}{:<20}{:<20}".format(str(key),str(val[0]),str(val[1]),str(val[2]),str(val[3])))
+
+        print("q for quit")
+        command = input("press enter to return ")
+        if command == "q":
+            print("bye")
+            self.clear_screen(platform)
+            quit()
+        else:
+            self.clear_screen(platform)
+            return
+
+    
+
+    def clear_screen(self,platform):
+        if platform == "linux" or platform == "linux2":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "darwin":
+            time.sleep(0.5)
+            os.system('clear')
+        elif platform == "win32":
+            time.sleep(0.5)
+            os.system('cls')
