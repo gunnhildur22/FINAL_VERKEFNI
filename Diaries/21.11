@@ -1,3 +1,5 @@
+21.11
+
 13:00 - Organisational meeting (Attending: AJ, HV, MG)
     - Voted for team leader, Hlynur Isak
     - Created Git Repo
@@ -21,3 +23,145 @@
 
 Agreed on meeting in person tomorrow morning (22.11) at 10:00 in RU.
 Goal for tomorrow is to make a progress assessment and continue working on improvements
+
+
+
+22.11
+
+10:00 - Meetup at RU - (Attending (IP): HV, MG, ÞH (ONL): AJ)
+    - Continued working one yesterdays tasks
+        - HV, MG, ÞH met up at RU and discussed yesterdays work
+        - AJ continued working on class diagrams from home
+
+Evening - Going Home
+    - Everyone who was present at school eventually went home
+    - Work was continued throughout the evening
+    - No formal meeting was held but agreement was reached:
+        - Meeting tomorrow morning at 11:00
+        - The goal for tomorrow morning is to figure out how far we have come
+        - When the situation is clearer and the breefing is done tasks are to be continued
+
+Agenda for meeting at 11:00 23.11
+    - We have come far with the requirements list, but it possibly needs some cleanup
+    - Our most important focus is the class diagram, what new information has come to light in regards to that matter?
+    - User group analysis is started, how far have we come? Is additinoal information needed?
+    - What happened to the happy path?
+    - MG did the use cases, hows that coming along?
+
+
+
+23.11
+
+11:00 - Started Work
+    - Meeting was not held as planned
+    - Continued work on the menu
+    - Meeting with TA is scheduled to get clarification on certain points in the project description
+    - Started planning our final report to be delivered on 25.11
+
+16:00 - Situational Meeting - (Attending: AJ, ÁV, GÁ, HV, MG, ÞH)
+    - We had a long productive conversation with Gylfi in an attempt to clarify the project description
+
+We finished the requirements list (A and B) today
+Tomorrow we continue creating use cases
+While doing that we can continue work on the class diagram as well as starting the 3 layer diagram and a state diagram
+Those who have no tasks related to that begin work on the report itself
+
+
+
+24.11
+
+Earlier part of the day was spent with GÁ, HV, MG and ÞH at school
+At school we white boarded the flow of the program and made sure all requirements could be met by the envisioned program
+AJ worked on the class diagram and the three tier design diagram from home
+
+MG went home to work on use cases while the GÁ, HV and ÞH stayed at school
+Day ended in a one hour dart competition with Gylfi
+
+
+
+25.11
+
+Design report hand in today.
+
+HV was busy the earlier part of the day and fell ill. Was working at half capacity through the evening.
+AJ finished up the class and three tier diagrams
+MG finished the use cases
+GÁ finished user group analyzis
+Everyone then helped each other format the report to be delivered
+
+
+
+28.11
+
+Morning meeting - (Attending: GÁ, MG)
+Started work on programming, discussed the implementation of our design
+Together we created files that we thought were necessary and started programming a basic structure
+
+Afternoon Meeting
+We need to get started dividing up tasks and how we are going to continue going forward
+
+29.11
+
+Morning meeting
+Ási is no longer with us :( We hope his career as a professional CS:GO player goes well and wish him the best of luck in his adventures
+Hlynur is ill and working from home:(
+Today we will make model classes
+
+Afternoon
+Model classes for leagues, players, matches, games and clubs are created
+
+30.11 
+Morning meeting
+Hlynur is still ill and Aðalbjörg has left the team 
+Today we start work on the ui layer, with the main menu as first tasks
+
+Afternoon meeting
+We have a nice start now but need to find the best way to write data to files
+
+1.12
+Morning Meeting
+Discussed with TA about how to write data from the user to csv files
+Got going with our data layer
+
+Afternoon meeting
+Our ui layer is starting to take shape and we have a general idea about how to write data to csv files
+
+2.12
+Morning meeting
+Today we continue work on the csv file writing
+We start getting some error prevention into the logic layer
+
+Afternoon meeting
+Some error prevention has been set up for a couple of the tasks available
+
+5.12
+Morning meeting
+Today we will work on connections between the layers and make sure that data can be retrieved from the database
+
+Afternoon meeting
+Can mostly successfully pull data from all files
+Work on game result almost finished
+
+6.12
+The program is starting to look good
+We can retrive data from all files and also have figured out the editing of data
+Leagues can be created and game results can be input
+Players and teams can be created
+
+7.12 
+Morning meeting
+In the mornign we spoke together to assign tasks and go ever how the project is looking. Magdalena was 
+going over the porgress of the report aswell as doing edit league and edit game functions.
+Gunnhildur was hard at work going over the project and assigning tasks for Þorri. 
+Þorri was doing said tasks which included doing input checks and figurin out clean screen function.
+Hlynur was recovering from sickness and making QP point UI. 
+
+8.12 Morning meeting 
+The group went over waht needs to be done to finish and tried to assign tasks for each other,
+then they worked on the tasks late into the evening still having somethings left to do.
+
+9.12 
+Morning meeting 
+We all came together early in the day to try to finish the project but learned that they would
+most likely finish really close to the deadline. however the group stuck together and tried there
+best to deliver the best product possible. 
